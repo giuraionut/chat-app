@@ -117,9 +117,3 @@ cloud:
 ## Monitor module with Prometheus and Grafana
 
 * To be able to watch our application we need `Prometheus` and `Grafana` which can be obtained easily with `Docker` as containers.
-
-
-
-# Group service
-
-## Operations and Endpoints

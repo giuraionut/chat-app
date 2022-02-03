@@ -1,0 +1,39 @@
+@import '../../renderer/colors-scheme';
+
+.side-bar-wrapper {
+  .side-bar::-webkit-scrollbar {
+    //remove scrollbar just for this div
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+
+  .side-bar {
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    height: 100vh;
+    background-color: $sidebar;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    .side-bar-header {
+      padding-top: 1rem;
+      .home-button {
+        width: 50px;
+        height: 50px;
+        background-color: $sidebar-button;
+        border-radius: 20%;
+        transition: 1s;
+      }
+
+      .home-button:hover {
+        transform: rotate(360deg);
+        cursor: pointer;
+      }
+    }
+  }
+}

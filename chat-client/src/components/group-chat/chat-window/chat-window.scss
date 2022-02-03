@@ -1,0 +1,18 @@
+@import '../../../renderer/colors-scheme.scss';
+.chat-wrapper {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  color: $global-text;
+  .window {
+    background-color: blue;
+    display: flex;
+    flex: 1 1 auto;
+  }
+  .input {
+    background-color: green;
+    flex: 0 1 55px;
+    border-radius: 10px;
+  }
+}

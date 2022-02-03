@@ -1,0 +1,17 @@
+{
+  "name": "chat-app",
+  "version": "4.4.0",
+  "description": "Chat application front-end made with React & Electron using react-electron-boilerplate.",
+  "main": "./dist/main/main.js",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "scripts": {
+    "electron-rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts",
+    "postinstall": "npm run electron-rebuild && npm run link-modules"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,20 @@
+@import '../../../renderer/colors-scheme.scss';
+.category-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  .category-container {
+    width: 200px;
+    height: 25px;
+    border-radius: 2.5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: $group-category;
+  }
+  .category-name {
+    font-size: 12px;
+    padding-left: 10px;
+    font-weight: bold;
+  }
+}

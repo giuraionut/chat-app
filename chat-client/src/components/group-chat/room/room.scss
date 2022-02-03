@@ -1,0 +1,19 @@
+@import '../../../renderer/colors-scheme.scss';
+.room-wrapper {
+  .room-container {
+    transition: 0.5s;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 5px;
+  }
+  .room-name {
+    font-size: 15px;
+  }
+  .room-container:hover {
+    background-color: $group-room;
+    cursor: pointer;
+  }
+}

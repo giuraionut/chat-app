@@ -1,0 +1,67 @@
+@import '../../renderer/colors-scheme';
+// .chat-window-wrapper {
+//   display: flex;
+//   flex-flow: column;
+//   height: 100vh;
+//   .chat-window {
+//     display: flex;
+//     .left-container {
+
+//     }
+//   }
+// }
+// .container-menu {
+
+// }
+
+.chat-wrapper {
+  display: flex;
+  .left-container {
+    background-color: $group-menu;
+    flex: 0 1 250px;
+    min-width: 225px;
+    height: 100vh;
+    background-color: $group-menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .right-container {
+    display: flex;
+    flex-flow: column;
+    background-color: $group-menu;
+    height: 100vh;
+    flex: 1;
+  }
+  .header {
+    background-color: $group-menu;
+    flex: 0 1 50px;
+    font-size: 20px;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    .button {
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      font-size: 15px;
+    }
+    .button:hover {
+      cursor: pointer;
+      background-color: $group-hover;
+    }
+  }
+  .body {
+    background-color: $group-menu;
+    flex: 1;
+  }
+  .footer {
+    background-color: $group-menu;
+    flex: 0 1 50px;
+  }
+}

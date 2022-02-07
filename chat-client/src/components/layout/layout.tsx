@@ -2,6 +2,7 @@ import './layout.scss';
 import SideBar from 'components/side-bar/side-bar';
 import GroupChatWindow from 'components/group-chat/group-chat-window';
 import { useState } from 'react';
+import Welcome from 'components/welcome-window/welcome';
 const layout = () => {
   const [show, setShow] = useState(false);
   const [users, setUsers] = useState(false);
@@ -13,7 +14,7 @@ const layout = () => {
         {show ? (
           <GroupChatWindow changeUsers={setUsers} users={users} group={group} />
         ) : (
-          <div> something else</div>
+          <Welcome />
         )}
       </div>
     </div>

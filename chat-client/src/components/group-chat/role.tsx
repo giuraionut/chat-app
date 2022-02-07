@@ -4,7 +4,7 @@ export default function role(name: string) {
   return (
     <div className="role-wrapper">
       <div className="role-container">
-        <text className="role-name">{name.toUpperCase()}</text>
+        <span className="role-name text">{name.toUpperCase()}</span>
       </div>
     </div>
   );

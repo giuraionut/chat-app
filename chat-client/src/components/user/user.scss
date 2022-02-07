@@ -1,4 +1,4 @@
-@import '../../../renderer/colors-scheme';
+@import '../../renderer/colors-scheme.scss';
 
 .user-wrapper {
   display: flex;
@@ -6,6 +6,7 @@
   justify-content: center;
   transform: translateX(-15px);
   margin-left: 10px;
+  transition: 0.3s;
   .avatar {
     object-fit: cover;
     background-color: $group-user-avatar;
@@ -17,16 +18,22 @@
   }
   .avatar:hover {
     transform: scale(1.2) translateX(12.5px);
-    cursor: pointer;
   }
   .user-name-container {
     width: 180px;
-    height: 25px;
+    height: 35px;
     background-color: $group-username-container;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0px 5px 5px 0px;
     font-size: 15px;
+    transition: 0.3s;
+  }
+}
+.user-wrapper:hover {
+  cursor: pointer;
+  .user-name-container {
+    background-color: lighten($group-user-avatar, 5%);
   }
 }

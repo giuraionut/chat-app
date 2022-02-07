@@ -1,14 +1,12 @@
 import room from 'components/group-chat/room/room';
-import user from 'components/group-chat/user/user';
-
+import user from 'components/user/user';
 import category from './category/category';
-
 import './group-chat-window.scss';
 import role from './role';
 
 const showUsers = () => {
   return (
-    <div className="left-container">
+    <>
       {role('Administrator')}
       {user(
         'John',
@@ -23,36 +21,46 @@ const showUsers = () => {
         'Abigail',
         'https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/07.jpg'
       )}
-    </div>
+    </>
   );
 };
 
 const showRooms = () => {
   return (
-    <div className="left-container">
+    <>
       {category('Category 1')}
-      {room('Games')}
       {room('Music')}
+      {room('Games')}
+      {room('Games')}
       {category('Category 2')}
-      {room('Jokes')}
-    </div>
+    </>
   );
 };
 
 const groupChatWindow = (props: any) => {
   return (
     <div className="chat-wrapper">
-      {props.users ? showUsers() : showRooms()}
-      <div className="right-container">
-        <div className="header">
-          <text className="button" onClick={() => props.changeUsers(true)}>
+      <div className="left-container">
+      <div className="header">
+          <span className="button text" onClick={() => props.changeUsers(true)}>
             Users
-          </text>
-          <text className="button" onClick={() => props.changeUsers(false)}>
+          </span>
+          <span className="button text" onClick={() => props.changeUsers(false)}>
             Rooms
-          </text>
+          </span>
         </div>
-        <div className="body">{props.group}</div>
+        {props.users ? showUsers() : showRooms()}
+      </div>
+      <div className="right-container">
+      <div className="header">
+          <span className="button text" onClick={() => props.changeUsers(true)}>
+            Alt buton
+          </span>
+          <span className="button text" onClick={() => props.changeUsers(false)}>
+            Si inca unu
+          </span>
+        </div>
+        <div className="body text">{props.group}</div>
         <div className="footer"></div>
       </div>
     </div>

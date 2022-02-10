@@ -61,7 +61,9 @@ const groupChatWindow = (props: any) => {
           </span>
         </div>
         <div className="body text">{props.group}</div>
-        <div className="footer"></div>
+        <div className="footer text">
+          blabla
+        </div>
       </div>
     </div>
   );
